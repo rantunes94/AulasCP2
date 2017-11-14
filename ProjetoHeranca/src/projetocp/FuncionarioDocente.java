@@ -2,7 +2,7 @@ package projetocp;
 
 import java.util.Calendar;
 
-public class FuncionarioDocente extends Funcionario{
+public abstract class FuncionarioDocente extends Funcionario{
     private String gabinete;
     private String departamento;
 
@@ -39,4 +39,16 @@ public class FuncionarioDocente extends Funcionario{
         str.append("\n\tDepartamento: ").append(departamento);
         return str.toString();
     }
+
+    public void aumentaSalario(int percentagem){
+        salario +=salario*percentagem;
+    }
+
+
+    public boolean validarIdade() {
+        if(calcularIdade()<21)
+            return INVALIDO;
+        return VALIDO;
+    }
+
 }

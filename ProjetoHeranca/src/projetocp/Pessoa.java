@@ -2,7 +2,7 @@ package projetocp;
 
 import java.util.Calendar;
 
-public class Pessoa implements Anos {
+public abstract class Pessoa implements Anos {
     protected int numero;
     protected String nome;
     protected String morada;
@@ -109,4 +109,7 @@ public class Pessoa implements Anos {
 
         return anos;
     }
+
+    public abstract boolean validarIdade();// ao meter o metodo abrastact aqui la em cima a classe tambem tem de ser abstract
+    // o metodo é abstract quando nao está implementado na super
 }

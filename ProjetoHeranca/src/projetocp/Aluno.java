@@ -2,7 +2,7 @@ package projetocp;
 
 import java.util.Calendar;
 
-public class Aluno extends Pessoa{
+public abstract class Aluno extends Pessoa{
     private Curso curso;
 
     public Aluno(int numero, String nome, String morada, Calendar dataNascimento, Calendar dataEntrada, Curso curso) {
@@ -26,5 +26,12 @@ public class Aluno extends Pessoa{
         str.append(curso); // vai buscar o toString do curso
 
         return str.toString();
+    }
+
+    @Override
+    public boolean validarIdade() {
+        if(calcularIdade()<17)
+            return INVALIDO;
+        return VALIDO;
     }
 }

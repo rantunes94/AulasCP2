@@ -2,7 +2,7 @@ package projetocp;
 
 import java.util.Calendar;
 
-public class Funcionario extends Pessoa {
+public abstract class Funcionario extends Pessoa {
     protected double salario;
 
     public Funcionario(int numero, String nome, String morada, Calendar dataNascimento, Calendar dataEntrada, double salario) {
